@@ -1,17 +1,19 @@
 <html>
-<body>
+  <body>
 
-<h2>Text Input</h2>
+  <h1>Text Input</h1>
 
-<form name="E-Mail" action="http://localhost:5000/result" method="POST">
-  Subject:<br>
-  <input type="text" name="subject" value={{request.form.subject}}>
-  <br>
-  Message:<br>
-  <textarea name="email" cols="100" rows="20" value={{request.form.email}}></textarea>
-  <br><br>
-  <button type = 'submit'> Submit</button>
-</form>
+  <form name="E-Mail" enctype=multipart/form-data action="http://localhost:5000/result" method="POST">
+    Subject:<br>
+    <input type="text" name="subject" value={{request.form.subject}}>
+    <br>
+    Message:<br>
+    <textarea name="email" cols="100" rows="20" value={{request.form.email}}></textarea>
+    <br>
+    Select a file: <input type=file name=file>
+    <br><br>
+    <button type = 'submit'> Submit</button>
+  </form>
 
-</body>
+  </body>
 </html>
